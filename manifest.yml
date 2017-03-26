@@ -1,0 +1,15 @@
+---
+declared-services:
+  my-conversation-service:
+    label: RecodeNigeria
+    plan: free
+applications:
+- name: RecodeNigeria
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - Conversation-7c
+  env:
+    NPM_CONFIG_PRODUCTION: false
